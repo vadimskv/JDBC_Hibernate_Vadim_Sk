@@ -10,7 +10,6 @@ import java.util.List;
 public class UserDaoJDBCImpl implements UserDao {
     private final Connection connection = Util.getConnection();
 
-
     public UserDaoJDBCImpl() {
     }
 
@@ -45,7 +44,6 @@ public class UserDaoJDBCImpl implements UserDao {
             preparedStatement.setString(2, user.getLastName());
             preparedStatement.setByte(3, user.getAge());
             preparedStatement.executeUpdate();
-
 
             System.out.println("User с именем — " + name + " добавлен в базу данных");
 
